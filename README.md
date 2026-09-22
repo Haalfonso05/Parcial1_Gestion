@@ -7,7 +7,7 @@ y base de conocimiento.
 
 ## Cómo levantarla
 
-Con MongoDB instalado local (sin Docker):
+Con MongoDB instalado local:
 
 ```bash
 mongosh --file db/01-colecciones.js
