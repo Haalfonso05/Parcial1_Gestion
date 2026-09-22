@@ -15,8 +15,14 @@ mongosh --file db/02-indices.js
 mongosh --file db/03-datos.js
 ```
 
-En Compass: se pega el contenido de cada archivo en la shell de abajo
-(`_MONGOSH`), en el mismo orden.
+En Compass:
+
+1. Conectate a tu Mongo local.
+2. Abajo en la ventana esta la pestana `_MONGOSH` (la shell integrada), la abres.
+3. Ahi pegas el contenido completo de `01-colecciones.js`, Enter. Despues el de
+   `02-indices.js`, Enter. Despues el de `03-datos.js`, Enter.
+4. En el panel de la izquierda ya aparece `helpdesk_erp` con sus colecciones
+   para explorar y consultar.
 
 ## Los archivos de `db/`
 
