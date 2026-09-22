@@ -36,23 +36,31 @@ probar("5. Usuario sin rol (valido, se asigna despues)", false, function () {
   db.usuarios.insertOne({ correo: "prueba_valida@correo.com", password_hash: "x".repeat(25), nombre: "Prueba Valida", fecha_registro: new Date() })
 })
 
+probar("6. Cliente sin tipo_cliente (natural/juridico)", true, function () {
+  db.usuarios.insertOne({ correo: "cliente_sin_tipo@correo.com", password_hash: "x".repeat(25), nombre: "Cliente Sin Tipo", rol: "cliente", fecha_registro: new Date() })
+})
+
+probar("7. Cliente con tipo_cliente valido", false, function () {
+  db.usuarios.insertOne({ correo: "cliente_con_tipo@correo.com", password_hash: "x".repeat(25), nombre: "Cliente Con Tipo", rol: "cliente", tipo_cliente: "natural", fecha_registro: new Date() })
+})
+
 print("=== TICKETS ===")
 
-probar("6. Estado que no existe en el enum", true, function () {
+probar("8. Estado que no existe en el enum", true, function () {
   db.tickets.insertOne({
     codigo: "TK-9001", fecha: new Date(), tipo_ticket: "problematica", tipo_problema: "prueba",
     creado_por: ObjectId("650000000000000000000004"), estado: "pendiente"
   })
 })
 
-probar("7. Codigo de ticket duplicado", true, function () {
+probar("9. Codigo de ticket duplicado", true, function () {
   db.tickets.insertOne({
     codigo: "TK-0001", fecha: new Date(), tipo_ticket: "problematica", tipo_problema: "prueba",
     creado_por: ObjectId("650000000000000000000004"), estado: "abierto"
   })
 })
 
-probar("8. Ticket valido", false, function () {
+probar("10. Ticket valido", false, function () {
   db.tickets.insertOne({
     codigo: "TK-9002", fecha: new Date(), tipo_ticket: "problematica", tipo_problema: "prueba",
     creado_por: ObjectId("650000000000000000000004"), estado: "abierto"
@@ -60,6 +68,6 @@ probar("8. Ticket valido", false, function () {
 })
 
 var borrados = db.tickets.deleteMany({ codigo: /^TK-90/ }).deletedCount
-var borradosUsr = db.usuarios.deleteMany({ correo: "prueba_valida@correo.com" }).deletedCount
+var borradosUsr = db.usuarios.deleteMany({ correo: { $in: ["prueba_valida@correo.com", "cliente_sin_tipo@correo.com", "cliente_con_tipo@correo.com"] } }).deletedCount
 print("Limpieza: se borraron " + borrados + " ticket(s) y " + borradosUsr + " usuario(s) de prueba")
 print("RESULTADO: " + ok + " correctas, " + mal + " inesperadas")

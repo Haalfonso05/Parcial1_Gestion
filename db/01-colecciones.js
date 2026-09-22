@@ -17,7 +17,11 @@ db.createCollection("usuarios", {
         tipo_cliente: { enum: ["natural", "juridico"] },
         empresa: { bsonType: "string" },
         fecha_registro: { bsonType: "date" }
-      }
+      },
+      anyOf: [
+        { properties: { rol: { not: { enum: ["cliente"] } } } },
+        { required: ["tipo_cliente"] }
+      ]
     }
   },
   validationLevel: "strict",
