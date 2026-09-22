@@ -14,6 +14,7 @@ db.createCollection("usuarios", {
         password_temporal: { bsonType: "bool" },
         nombre: { bsonType: "string", minLength: 3 },
         rol: { enum: ["cliente", "empleado", "admin"] },
+        tipo_cliente: { enum: ["natural", "juridico"] },
         empresa: { bsonType: "string" },
         fecha_registro: { bsonType: "date" }
       }

@@ -40,7 +40,8 @@ Los 01, 02 y 03 se pueden correr varias veces sin romper nada (borran y vuelven 
 
 - **`usuarios`** — clientes y empleados juntos. Se registran con correo o
   documento y una clave aleatoria. El rol (`cliente`, `empleado`, `admin`) no
-  es obligatorio al crearse: se asigna después.
+  es obligatorio al crearse: se asigna después. Los clientes además tienen
+  `tipo_cliente` (`natural` o `juridico`).
 - **`sesiones`** — cuándo entra y sale cada usuario (`inicio` / `fin`).
 - **`tickets`** — el cliente lo crea con fecha, tipo de ticket y tipo de
   problema; el admin lo asigna a un empleado (`asignado_a`).

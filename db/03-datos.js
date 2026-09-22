@@ -28,14 +28,14 @@ db.usuarios.insertMany([
   { _id: USR_EMPLEADO_2, correo: "mrodriguez@sistemasintegrados.com", password_hash: HASH, password_temporal: false, nombre: "Marcela Rodriguez Silva", rol: "empleado", empresa: "Sistemas Integrados S.A.", fecha_registro: new Date("2026-04-05") },
   { _id: USR_EMPLEADO_3, correo: "dcastro@sistemasintegrados.com", password_hash: HASH, password_temporal: false, nombre: "Diego Castro Nino", rol: "empleado", empresa: "Sistemas Integrados S.A.", fecha_registro: new Date("2026-05-12") },
   { _id: USR_EMPLEADO_4, correo: "vlopez@sistemasintegrados.com", password_hash: HASH, password_temporal: false, nombre: "Valentina Lopez Duarte", rol: "empleado", empresa: "Sistemas Integrados S.A.", fecha_registro: new Date("2026-06-18") },
-  { _id: USR_CLIENTE_1, correo: "compras@eltornillo.com.co", password_hash: HASH, password_temporal: true, nombre: "Andres Sepulveda Mora", rol: "cliente", fecha_registro: new Date("2026-08-15") },
-  { _id: USR_CLIENTE_2, documento: "60445566", password_hash: HASH, password_temporal: true, nombre: "Nubia Ramirez Prada", rol: "cliente", fecha_registro: new Date("2026-08-20") },
-  { _id: USR_CLIENTE_3, correo: "pedidos@ferreteriacentral.com", password_hash: HASH, password_temporal: true, nombre: "Camilo Vega Rojas", rol: "cliente", fecha_registro: new Date("2026-08-22") },
-  { _id: USR_CLIENTE_4, documento: "88221144", password_hash: HASH, password_temporal: true, nombre: "Diana Osorio Leon", rol: "cliente", fecha_registro: new Date("2026-08-25") },
-  { _id: USR_CLIENTE_5, correo: "contacto@modaurbana.co", password_hash: HASH, password_temporal: true, nombre: "Sergio Nino Bautista", rol: "cliente", fecha_registro: new Date("2026-08-28") },
-  { _id: USR_CLIENTE_6, documento: "13398765", password_hash: HASH, password_temporal: true, nombre: "Paola Contreras Amaya", rol: "cliente", fecha_registro: new Date("2026-09-01") },
-  { _id: USR_CLIENTE_7, correo: "admin@electrohogar.com.co", password_hash: HASH, password_temporal: true, nombre: "Ricardo Pabon Quintero", rol: "cliente", fecha_registro: new Date("2026-09-03") },
-  { _id: USR_CLIENTE_8, documento: "45509921", password_hash: HASH, password_temporal: true, nombre: "Lorena Suarez Jaimes", rol: "cliente", fecha_registro: new Date("2026-09-05") },
+  { _id: USR_CLIENTE_1, correo: "compras@eltornillo.com.co", password_hash: HASH, password_temporal: true, nombre: "Andres Sepulveda Mora", rol: "cliente", tipo_cliente: "juridico", fecha_registro: new Date("2026-08-15") },
+  { _id: USR_CLIENTE_2, documento: "60445566", password_hash: HASH, password_temporal: true, nombre: "Nubia Ramirez Prada", rol: "cliente", tipo_cliente: "natural", fecha_registro: new Date("2026-08-20") },
+  { _id: USR_CLIENTE_3, correo: "pedidos@ferreteriacentral.com", password_hash: HASH, password_temporal: true, nombre: "Camilo Vega Rojas", rol: "cliente", tipo_cliente: "juridico", fecha_registro: new Date("2026-08-22") },
+  { _id: USR_CLIENTE_4, documento: "88221144", password_hash: HASH, password_temporal: true, nombre: "Diana Osorio Leon", rol: "cliente", tipo_cliente: "natural", fecha_registro: new Date("2026-08-25") },
+  { _id: USR_CLIENTE_5, correo: "contacto@modaurbana.co", password_hash: HASH, password_temporal: true, nombre: "Sergio Nino Bautista", rol: "cliente", tipo_cliente: "juridico", fecha_registro: new Date("2026-08-28") },
+  { _id: USR_CLIENTE_6, documento: "13398765", password_hash: HASH, password_temporal: true, nombre: "Paola Contreras Amaya", rol: "cliente", tipo_cliente: "natural", fecha_registro: new Date("2026-09-01") },
+  { _id: USR_CLIENTE_7, correo: "admin@electrohogar.com.co", password_hash: HASH, password_temporal: true, nombre: "Ricardo Pabon Quintero", rol: "cliente", tipo_cliente: "juridico", fecha_registro: new Date("2026-09-03") },
+  { _id: USR_CLIENTE_8, documento: "45509921", password_hash: HASH, password_temporal: true, nombre: "Lorena Suarez Jaimes", rol: "cliente", tipo_cliente: "natural", fecha_registro: new Date("2026-09-05") },
   { _id: USR_NUEVO_SIN_ROL, correo: "nuevoempleado@sistemasintegrados.com", password_hash: HASH, password_temporal: true, nombre: "Camila Torres Diaz", empresa: "Sistemas Integrados S.A.", fecha_registro: new Date("2026-09-20") }
 ])
 
