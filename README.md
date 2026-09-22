@@ -28,7 +28,7 @@ En Compass: se pega el contenido de cada archivo en la shell de abajo
 | `03-datos.js` | Carga datos de ejemplo |
 | `06-pruebas.js` | Inserta documentos malos a propósito para probar la validación |
 
-Los 01, 02 y 03 se pueden correr varias veces sin romper nada.
+Los 01, 02 y 03 se pueden correr varias veces sin romper nada (borran y vuelven a cargar).
 
 ## Las 4 colecciones
 
