@@ -26,7 +26,6 @@ En Compass: se pega el contenido de cada archivo en la shell de abajo
 | `01-colecciones.js` | Crea las 4 colecciones con validación `$jsonSchema` |
 | `02-indices.js` | Crea los índices |
 | `03-datos.js` | Carga datos de ejemplo |
-| `04-consultas.js` | Consultas de ejemplo (find, lookup, group) |
 | `06-pruebas.js` | Inserta documentos malos a propósito para probar la validación |
 
 Los 01, 02 y 03 se pueden correr varias veces sin romper nada.
