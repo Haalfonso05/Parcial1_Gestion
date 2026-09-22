@@ -33,6 +33,7 @@ En Compass:
 | `02-indices.js` | Crea los índices |
 | `03-datos.js` | Carga datos de ejemplo |
 | `06-pruebas.js` | Inserta documentos malos a propósito para probar la validación |
+| `ayuda-correo.js` | Ejemplo de como generar el correo de un empleado nuevo con una funcion, en vez de escribirlo a mano |
 
 Los 01, 02 y 03 se pueden correr varias veces sin romper nada (borran y vuelven a cargar).
 
